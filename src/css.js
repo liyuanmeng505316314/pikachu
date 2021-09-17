@@ -1,11 +1,14 @@
 const string =`
+   /*进行初始化*/
   *{margin: 0px;padding: 0px;}
+  /*设置脸部基础信息*/
 .face{
     background-color:rgb(255,219,0);
     position: relative;
     width: 100vw;
     height: 100vh;
 }
+/*设置鼻子的三角形部分*/
 .san{
     border: 18px solid black;
     border-color: black transparent transparent transparent;
@@ -16,7 +19,7 @@ const string =`
     left: 50%;
     margin-left: -20px;
 }
-
+/*设置鼠标移上去鼻子会动的动画*/
 @keyframes wave{
     0%{transform: rotate(0deg);}
     33%{transform: rotate(9deg);}
@@ -26,7 +29,7 @@ const string =`
 .san:hover{
     animation: wave 250ms infinite linear;
 }
-
+/*设置鼻子的半圆形部分*/
 .hu{
     position: absolute;
     background-color:black;
@@ -36,7 +39,7 @@ const string =`
     width:36px;
     height: 12px;
 }
-
+/*设置两个眼睛共有的信息*/
 .eye{
     width: 100px;
     height: 100px; 
@@ -48,7 +51,7 @@ const string =`
     left: 50%;
     margin-left: -15px;
 }
-
+/*设置瞳孔*/
 .eye::before{
     content: '';
     display: block;
@@ -61,13 +64,14 @@ const string =`
     margin-left: 8px;
     margin-top: 5px;
 }
-
+/*设置左右眼*/
 .eye.left{
     transform: translateX(-220px)
 }
 .eye.right{
     transform: translateX(150px)
 }
+/*设置上嘴唇的共有部分*/
 .up{
     width: 100px;
     height: 100px;
@@ -76,7 +80,7 @@ const string =`
     top: 250px;
     margin-left: -50px;
 } 
-
+/*设置上嘴唇的左边*/
  #left_lip{
     border: 5px solid black;
     width: 130px;
@@ -90,6 +94,7 @@ const string =`
     margin-left: -90px;
     top:20px;
 }
+/*遮住那几条很丑的透明的虚线*/
 #left_lip::before{
     content: "";
     display: block;
@@ -110,7 +115,7 @@ const string =`
     margin-left: -10px;
     margin-top: -40px;
 }
-
+/*设置右嘴唇*/
 #right_lip{
     border: 5px solid black;
     width: 130px;
@@ -124,7 +129,7 @@ const string =`
     z-index: 5;
     background-color: rgb(255,219,0);
 }
-
+/*遮住那些很丑的虚线*/
  #right_lip::before{
     content: "";
     display: block;
@@ -147,7 +152,7 @@ const string =`
     z-index: 3;
     margin-top: -40px;
 }
-
+/*下嘴唇*/
 .down{
     position: absolute;
     height: 250px;
@@ -157,7 +162,7 @@ const string =`
     width: 280px;
     overflow: hidden;
 }
-
+/*下嘴唇的阴影部分*/
 .mouth .down .yuan1{
     position: absolute;
     height: 900px;
@@ -183,7 +188,7 @@ const string =`
     margin-left: -150px;
     border-radius: 150px;
 }
-
+/*设置两个酒窝*/
 .dimple{
     position: absolute;
     border: 5px solid black;
@@ -201,6 +206,7 @@ const string =`
 .dimple.right{
     left: 450px;
 }
+/*媒体查询，进行移动端设配*/
 @media (max-width: 500px) {
     #html {
       height: 50vh;
